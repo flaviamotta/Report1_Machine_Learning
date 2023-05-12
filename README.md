@@ -3,7 +3,7 @@ Comparing the performance of Lasso, Ridge and Least Square regression in predict
 Rio de Janeiro and Belo Horizonte.
 
 At first, the division of 80% and 20% was chosen. However, later, an analysis was made with the 
-confidence intervals in order to understand whether this chosen percentage is consistent with the
+confidence intervals in order to understand whether this percentage is consistent with the
 desired interval. The results show that the chosen division is suitable for the database. This 
 because even though the amplitude is smaller in the division 70% - 30%, we obtain a higher estimated
 risk in this scenario. We then decided to continue with the choice of 80% and 20%
