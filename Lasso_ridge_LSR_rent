@@ -103,8 +103,8 @@ summary(data$floor2)
 # apto_4 apto_5+ casa
 # 2765 3818 2063
 
-After these changes, the three regressions were estimated, and for the lasso, the best
-value of \lambda, found by cross-validation on the training set, was 24.41898.
+#After these changes, the three regressions were estimated, and for the lasso, the best
+#value of \lambda, found by cross-validation on the training set, was 24.41898.
 
 # model.matrix X
 X <- data[,c(2:5,7,8,10,1)]
