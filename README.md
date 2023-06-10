@@ -1,32 +1,16 @@
 # Report1_Machine_Learning
-Comparing the performance of Lasso, Ridge and Least Square regression in predicting the rent value of apartments in three cities: São Paulo,
-Rio de Janeiro and Belo Horizonte.
+This project focuses on comparing the performance of Lasso, Ridge, and Least Square regression models in predicting the rental values of apartments in three cities: São Paulo, Rio de Janeiro, and Belo Horizonte. The dataset includes various covariates such as property characteristics, location, and amenities.
 
-At first, the division of 80% and 20% was chosen. However, later, an analysis was made with the 
-confidence intervals in order to understand whether this percentage is consistent with the
-desired interval. The results show that the chosen division is suitable for the database. This 
-because even though the amplitude is smaller in the division 70% - 30%, we obtain a higher estimated
-risk in this scenario. We then decided to continue with the choice of 80% and 20%
+Key Findings:
 
-Since most of the observations were either apartments whose buildings had less than 6 floors or were houses,
-a new categorical variable floor2 was created, with the values house, when the property was a house; apto_4,
-for apartments in buildings with less than five floors; apto_5+, for apartments in a building with five or more
-floors, we chose by this division due to the fact that it is mandatory, by law, that buildings with 5 floors 
-or more have elevator. Furthermore, the variables: "animal" and "furniture" were transformed into factor.
+- Initially, an 80% - 20% split was chosen for training and testing. However, further analysis using confidence intervals revealed that this split is consistent with the desired interval, leading to the decision to proceed with this division.
+- Due to a significant proportion of observations being either houses or apartments in buildings with less than six floors, a new categorical variable called "floor2" was created. It categorized properties as "house" for houses, "apto_4" for apartments in buildings with less than five floors, and "apto_5+" for apartments in buildings with five or more floors, considering the legal requirement for elevators in such buildings.
+- The "animal" and "furniture" variables were transformed into factors to better represent their categorical nature.
+- The three regression models (Lasso, Ridge, and Least Square) were estimated, and the Lasso model identified the best value of λ (24.41898) through cross-validation on the training set.
+- The standard errors of the three models were comparable, making it challenging to determine which model exhibited better predictive performance. The mean squared error (MSE) and confidence interval widths were high for all three regression types, possibly due to the limited number of available covariates.
+- Despite Ridge regression showing the lowest MSE and standard error, the Lasso model was considered preferable due to its advantage of excluding unnecessary covariates.
+- The coefficient interpretation aligns with expectations, indicating that larger properties with more rooms, bathrooms, parking spaces, and furnished options tend to have higher rental values. Apartments in buildings with five or more floors typically command higher rents due to additional amenities, common areas, and the presence of elevators.
+- Rent values were generally higher in São Paulo, followed by Rio de Janeiro and Belo Horizonte, as anticipated.
 
-After these changes, the three regressions were estimated, and for the lasso, the best value of \lambda, found by
-cross-validation on the training set, was 24.41898.
 
-The standard errors of the three types of model were very close, in this sense, it is difficult to say which of the models had 
-a better predictive performance, because both the MSE and the amplitude of the confidence intervals were high for all three types
-of regression. One of the possible reasons why the MSE of all estimated models was high is the small amount of covariates available.
-One of the components of the expected risk is the intrinsic variance of the response variable, and this can only be reduced if the 
-amount of observed covariates is increased. Although the ridge regression showed the lowest value for the MSE and for the standard
-error, it is understood that the lasso is preferable, since it has the advantage of not using one of the covariates.
-
-The coefficients interpretation makes sense for the fit in focus. Larger properties with more rooms, bathrooms, parking spaces or 
-furniture are expected to have a higher rental value. We also noticed that the rent of apartments in buildings with 5 floors or more
-is higher on average than those with up to 4 floors. This is usually because larger residential buildings tend to also have a greater
-structure in common areas, such as leisure areas and other improvements, in addition to the mandatory use of elevators. With regard to
-cities, as expected, rent is on average more expensive in the city of São Paulo, followed by Rio de Janeiro and Belo Horizonte.
-
+Overall, this project provides insights into the performance and interpretability of Lasso, Ridge, and Least Square regression models for rent prediction in different cities. The findings highlight the influence of property characteristics and location on rental values, aiding in decision-making processes for landlords and real estate professionals operating in these areas.
