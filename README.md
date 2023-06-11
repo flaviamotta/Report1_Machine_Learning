@@ -3,7 +3,7 @@ This project focuses on comparing the performance of Lasso, Ridge, and Least Squ
 
 Key Findings:
 
-- Initially, an 80% - 20% split was chosen for training and testing. However, further analysis using confidence intervals revealed that this split is consistent with the desired interval, leading to the decision to proceed with this division.
+- Initially, an 80% - 20% split was chosen for training and testing. Further analysis using confidence intervals revealed that this split is consistent with the desired interval, leading to the decision to proceed with this division.
 - Due to a significant proportion of observations being either houses or apartments in buildings with less than six floors, a new categorical variable called "floor2" was created. It categorized properties as "house" for houses, "apto_4" for apartments in buildings with less than five floors, and "apto_5+" for apartments in buildings with five or more floors, considering the legal requirement for elevators in such buildings.
 - The "animal" and "furniture" variables were transformed into factors to better represent their categorical nature.
 - The three regression models (Lasso, Ridge, and Least Square) were estimated, and the Lasso model identified the best value of λ (24.41898) through cross-validation on the training set.
